@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --ink: #17212b;
+  --muted: #65717d;
+  --line: #e4e9ed;
+  --paper: #f6f8f7;
+  --green: #1e725d;
+  --green-dark: #155443;
+  --mint: #e8f3ee;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "DM Sans", sans-serif; }
+button, input { font: inherit; }
+.page-shell { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+.topbar { height: 82px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.brand { color: var(--ink); text-decoration: none; font: 800 23px Manrope, sans-serif; letter-spacing: -1px; }
+.brand span, .hero h1 span { color: var(--green); }
+.nav-note { color: var(--muted); font-size: 13px; }
+.hero { padding: 66px 0 44px; max-width: 760px; }
+.eyebrow { color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: 1.7px; margin: 0 0 12px; }
+.hero h1 { font: 800 clamp(38px, 6vw, 62px)/1.08 Manrope, sans-serif; letter-spacing: -3px; margin: 0; }
+.hero-copy { max-width: 620px; color: var(--muted); font-size: 16px; line-height: 1.7; margin-top: 20px; }
+.workspace { display: grid; grid-template-columns: 1.05fr .95fr; gap: 22px; align-items: start; padding-bottom: 60px; }
+.form-card, .insight-card { background: white; border: 1px solid var(--line); border-radius: 18px; padding: 28px; box-shadow: 0 10px 35px rgba(30,50,45,.035); }
+.section-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.section-heading h2, .insight-card h2 { font: 700 24px Manrope, sans-serif; letter-spacing: -.8px; margin: 0; }
+.step-pill { background: var(--mint); color: var(--green-dark); border-radius: 30px; padding: 8px 12px; font-size: 11px; font-weight: 700; }
+form { display: grid; gap: 15px; }
+label { display: grid; gap: 7px; color: #34414b; font-size: 12px; font-weight: 700; }
+input { width: 100%; border: 1px solid #dce3e5; border-radius: 9px; padding: 12px 13px; outline: none; background: #fff; color: var(--ink); font-size: 13px; font-weight: 400; }
+input:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(30,114,93,.09); }
+input::placeholder { color: #a0aab0; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.hint { color: #8b969c; font-weight: 400; }
+.primary-button, .secondary-button { border: 0; border-radius: 9px; padding: 13px 17px; cursor: pointer; font-size: 13px; font-weight: 700; }
+.primary-button { margin-top: 5px; background: var(--green); color: white; }
+.primary-button:hover { background: var(--green-dark); }
+.secondary-button { width: 100%; margin-top: 12px; color: var(--green-dark); background: var(--mint); }
+button:disabled { opacity: .6; cursor: wait; }
+.status-message { color: var(--green-dark); background: var(--mint); border-radius: 8px; padding: 10px 12px; font-size: 12px; line-height: 1.5; }
+.insight-card { background: #f0f5f2; }
+.insight-card h2 { max-width: 360px; font-size: 29px; line-height: 1.18; }
+.muted { color: var(--muted); font-size: 13px; line-height: 1.65; }
+.insight-list { display: grid; gap: 17px; margin: 27px 0; }
+.insight-list > div { display: flex; align-items: center; gap: 13px; }
+.insight-list > div > span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: white; color: var(--green); font-size: 11px; font-weight: 700; }
+.insight-list p { display: grid; gap: 3px; margin: 0; font-size: 12px; }
+.insight-list small { color: var(--muted); font-size: 11px; }
+.result-box { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 17px; min-height: 150px; }
+.result-title { color: var(--green); font-size: 9px; font-weight: 800; letter-spacing: 1.3px; }
+.result-box p { color: #929da3; font-size: 12px; line-height: 1.6; }
+.result-box pre { white-space: pre-wrap; overflow-wrap: anywhere; color: #46535b; font: 12px/1.7 "DM Sans", sans-serif; }
+footer { border-top: 1px solid var(--line); padding: 20px 0 30px; color: #8b969c; font-size: 11px; }
+@media (max-width: 800px) {
+  .workspace { grid-template-columns: 1fr; }
+  .hero { padding-top: 48px; }
+}
+@media (max-width: 480px) {
+  .page-shell { padding: 0 16px; }
+  .form-card, .insight-card { padding: 20px; }
+  .two-col { grid-template-columns: 1fr; }
+  .nav-note { font-size: 11px; }
+}
